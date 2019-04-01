@@ -40,6 +40,20 @@ window.onload = function () {
 
 
     var submit = document.getElementById("submit");
+    var temp;
+    
+    var previous = new Array(7);
+    for (var i = 0; i < 7; i++) {
+        previous[i] = new Array(7);
+    }
+    for (var i = 0; i < 7; i++) {
+        for (var j = 0; j < 7; j++) {
+            previous[i][j] = 0;
+        }
+        previous[i][i] = 1/7;
+    }
+    console.log(previous);
+    
     submit.onclick = function () {
         var input = document.getElementById("inputText").value.toUpperCase().split(" ");
         input.forEach(function (elem) {
@@ -56,7 +70,13 @@ window.onload = function () {
                 bitInput += 1;
             }
             console.log(bitInput);
-            update_sensor_model(bitInput, ERROR, observed, actual);
+            update_sensor_model(bitInput, 0.15, observed, actual);
+            console.log(observed)
+            temp = math.multiply(math.transpose(math.matrix(transition)), previous).valueOf();
+            console.log(temp);
+            previous = math.multiply(math.matrix(observed[bitInput]), temp).valueOf();
+            normalize(previous);
+            console.log(previous);
             bitInput = 0;
             
         });
@@ -103,4 +123,17 @@ function update_sensor_model(obs, error, observation, actual) {
         correct = 4 - (xor.match(/1/g) || []).length;
         observation[obs][i][i] = ((1 - error) ** correct) * (error ** (4 - correct));
     }
+}
+
+function normalize(matrix){
+    
+    console.log(matrix);
+    var total = 0;
+    for (var i = 0; i < 7; i++){
+        total += matrix[i][i];
+    }
+    for (var i = 0; i < 7; i++){
+        matrix[i][i] = matrix[i][i]/total;
+    }
+    
 }
