@@ -31,14 +31,9 @@ window.onload = function () {
             }
         }
     }
-    console.log("Here "+math.multiply(math.matrix(locations),locations));
     var actual = new Array(7);
     actual = initialize_actual(locations);
-
-    console.log(transition);
-    console.log(observed);
-
-
+    
     var submit = document.getElementById("submit");
     var temp;
     
@@ -46,7 +41,6 @@ window.onload = function () {
     for (var i = 0; i < 7; i++) {
         previous[i] = 1/7;
     }
-    console.log(previous);
     
     submit.onclick = function () {
         var input = document.getElementById("inputText").value.toUpperCase().split(" ");
@@ -63,13 +57,12 @@ window.onload = function () {
             if (elem.includes("W")) {
                 bitInput += 1;
             }
-            console.log(bitInput);
             update_sensor_model(bitInput, 0.15, observed, actual);
             temp = math.multiply(math.transpose(math.matrix(transition)), previous).valueOf();
-            console.log(temp);
             previous = math.multiply(math.matrix(observed[bitInput]), temp).valueOf();
-            console.log(previous);
+            normalize(previous);
             bitInput = 0;
+            console.log(previous);
             
         });
     }
@@ -85,18 +78,19 @@ function initialize_actual(given_locations) {
         for (var j = 0; j < 3; j++) {
             if (given_locations[i][j] == 1) {
                 return_actual[counter] = 0;
-                if ((i - 1) != -1 && !given_locations[i - 1][j] == 1) {
+                if ((i - 1) != -1 && given_locations[i - 1][j] == 1) {
                     return_actual[counter] += 8;
                 }
-                if ((i + 1) != 3 && !given_locations[i + 1][j] == 1) {
+                if ((i + 1) != 3 && given_locations[i + 1][j] == 1) {
                     return_actual[counter] += 4;
                 }
-                if ((j + 1) != 3 && !given_locations[i][j + 1] == 1) {
+                if ((j + 1) != 3 && given_locations[i][j + 1] == 1) {
                     return_actual[counter] += 2;
                 }
-                if ((j - 1) != -1 && !given_locations[i][j - 1] == 1) {
+                if ((j - 1) != -1 && given_locations[i][j - 1] == 1) {
                     return_actual[counter] += 1;
                 }
+                return_actual[counter] = 15 - return_actual[counter];
                 counter++;
             }
         }
@@ -111,7 +105,7 @@ function update_sensor_model(obs, error, observation, actual) {
 
     for (var i = 0; i < 7; i++) {
         xor = (obs ^ actual[i]).toString(2);
-        correct = (xor.match(/1/g) || []).length;
+        correct = 4 - (xor.match(/1/g) || []).length;
         observation[obs][i][i] = ((1 - error) ** correct) * (error ** (4 - correct));
     }
 }
@@ -120,10 +114,9 @@ function normalize(matrix){
     
     var total = 0;
     for (var i = 0; i < 7; i++){
-        total += matrix[i][i];
+        total += matrix[i];
     }
     for (var i = 0; i < 7; i++){
-        matrix[i][i] = matrix[i][i]/total;
-    }
-    
+        matrix[i] = matrix[i]/total;
+    }    
 }
