@@ -44,13 +44,7 @@ window.onload = function () {
     
     var previous = new Array(7);
     for (var i = 0; i < 7; i++) {
-        previous[i] = new Array(7);
-    }
-    for (var i = 0; i < 7; i++) {
-        for (var j = 0; j < 7; j++) {
-            previous[i][j] = 0;
-        }
-        previous[i][i] = 1/7;
+        previous[i] = 1/7;
     }
     console.log(previous);
     
@@ -71,11 +65,9 @@ window.onload = function () {
             }
             console.log(bitInput);
             update_sensor_model(bitInput, 0.15, observed, actual);
-            console.log(observed)
             temp = math.multiply(math.transpose(math.matrix(transition)), previous).valueOf();
             console.log(temp);
             previous = math.multiply(math.matrix(observed[bitInput]), temp).valueOf();
-            normalize(previous);
             console.log(previous);
             bitInput = 0;
             
@@ -93,16 +85,16 @@ function initialize_actual(given_locations) {
         for (var j = 0; j < 3; j++) {
             if (given_locations[i][j] == 1) {
                 return_actual[counter] = 0;
-                if ((i - 1) != -1 && given_locations[i - 1][j] == 1) {
+                if ((i - 1) != -1 && !given_locations[i - 1][j] == 1) {
                     return_actual[counter] += 8;
                 }
-                if ((i + 1) != 3 && given_locations[i + 1][j] == 1) {
+                if ((i + 1) != 3 && !given_locations[i + 1][j] == 1) {
                     return_actual[counter] += 4;
                 }
-                if ((j + 1) != 3 && given_locations[i][j + 1] == 1) {
+                if ((j + 1) != 3 && !given_locations[i][j + 1] == 1) {
                     return_actual[counter] += 2;
                 }
-                if ((j - 1) != -1 && given_locations[i][j - 1] == 1) {
+                if ((j - 1) != -1 && !given_locations[i][j - 1] == 1) {
                     return_actual[counter] += 1;
                 }
                 counter++;
@@ -114,20 +106,18 @@ function initialize_actual(given_locations) {
 
 function update_sensor_model(obs, error, observation, actual) {
 
-    console.log(observation);
     var xor = 0;
     var correct = 0;
 
     for (var i = 0; i < 7; i++) {
         xor = (obs ^ actual[i]).toString(2);
-        correct = 4 - (xor.match(/1/g) || []).length;
+        correct = (xor.match(/1/g) || []).length;
         observation[obs][i][i] = ((1 - error) ** correct) * (error ** (4 - correct));
     }
 }
 
 function normalize(matrix){
     
-    console.log(matrix);
     var total = 0;
     for (var i = 0; i < 7; i++){
         total += matrix[i][i];
