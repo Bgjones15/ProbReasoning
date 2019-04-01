@@ -36,6 +36,7 @@ window.onload = function () {
 
     console.log(actual);
     console.log(update_sensor_model("1010", 0.15, observed, actual));
+    console.log(update_sensor_model("1000", 0.15, observed, actual));
 
     console.log(transition);
     console.log(observed);
