@@ -36,6 +36,10 @@ window.onload = function () {
     actual = initialize_actual(locations);
 
     console.log(actual);
+<<<<<<< HEAD
+=======
+    console.log(update_sensor_model("1010", 0.15, observed, actual));
+>>>>>>> 639f18279dd1a15a11a5edacf2f7f0f254f91821
 
     console.log(transition);
     console.log(observed);
@@ -70,12 +74,11 @@ function initialize_actual(given_locations) {
 
     var return_actual = new Array(7);
     var counter = 0;
-    var value;
 
     for (var i = 0; i < 3; i++) {
         for (var j = 0; j < 3; j++) {
             if (given_locations[i][j] == 1) {
-                value = 0;
+                return_actual[counter] = 0;
                 if ((i - 1) != -1 && given_locations[i - 1][j] == 1) {
                     return_actual[counter] += 8;
                 }
@@ -100,7 +103,7 @@ function update_sensor_model(obs, error, observation, actual) {
     console.log(observation);
     var index = parseInt(obs, 2);
     var xor = 0;
-    var correct = 0
+    var correct = 0;
 
     for (var i = 0; i < 7; i++) {
         xor = (index ^ actual[i]).toString(2);
