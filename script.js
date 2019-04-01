@@ -26,23 +26,29 @@ window.onload = function () {
     }
     for (var i = 0; i < 16; i++) {
         for (var j = 0; j < 7; j++) {
-            for(k =0; k< 7; k++){
+            for (k = 0; k < 7; k++) {
                 observed[i][j][k] = 0;
             }
         }
     }
     var actual = new Array(7);
     actual = initialize_actual(locations);
-    
+
     var submit = document.getElementById("submit");
     var temp;
-    
+
     var previous = new Array(7);
     for (var i = 0; i < 7; i++) {
-        previous[i] = 1/7;
+        previous[i] = 1 / 7;
     }
     
+    document.getElementById("error").oninput = function(){
+        submit.click();
+    }
+
     submit.onclick = function () {
+        reset(observed, previous);
+        var error = document.getElementById("error").value;
         var input = document.getElementById("inputText").value.toUpperCase().split(" ");
         input.forEach(function (elem) {
             if (elem.includes("N")) {
@@ -57,17 +63,45 @@ window.onload = function () {
             if (elem.includes("W")) {
                 bitInput += 1;
             }
-            update_sensor_model(bitInput, 0.15, observed, actual);
+            update_sensor_model(bitInput, error, observed, actual);
             temp = math.multiply(math.transpose(math.matrix(transition)), previous).valueOf();
             previous = math.multiply(math.matrix(observed[bitInput]), temp).valueOf();
             normalize(previous);
             bitInput = 0;
-            console.log(previous);
-            
+            setMap(previous);
+
         });
     }
 
 };
+
+function setMap(previous) {
+    for (var i = 0; i < 7; i++) {
+        var blocks = document.getElementsByTagName("td");
+        Array.from(blocks).forEach(function (elem) {
+            if (elem.className != "wall" && elem.id==i) {
+                elem.style.backgroundColor = "hsl(0,100%,100%)";
+                elem.style.backgroundColor = "hsl("+((previous[i]/.02)+160)+",100%,50%)";
+                var x = previous[i];
+                elem.onmouseover = function(){
+                    document.getElementById("output").innerHTML = "Hovered Probability: "+x;
+                }
+                if(previous[i]>.75){
+                    elem.className = "certain";
+                }
+                else if(previous[i]>.5){
+                    elem.className = "probably";
+                }
+                else if(previous[i]>.25){
+                    elem.className = "maybe";
+                }
+                else{
+                    elem.className = "not";
+                }
+            }
+        });
+    }
+}
 
 function initialize_actual(given_locations) {
 
@@ -110,13 +144,23 @@ function update_sensor_model(obs, error, observation, actual) {
     }
 }
 
-function normalize(matrix){
-    
+function normalize(matrix) {
+
     var total = 0;
-    for (var i = 0; i < 7; i++){
+    for (var i = 0; i < 7; i++) {
         total += matrix[i];
     }
-    for (var i = 0; i < 7; i++){
-        matrix[i] = matrix[i]/total;
-    }    
+    for (var i = 0; i < 7; i++) {
+        matrix[i] = matrix[i] / total;
+    }
+}
+
+function reset(observed, previous) {
+    observed.forEach(function (elem) {
+        elem = 0;
+    });
+    for (var i = 0; i < 7; i++) {
+        previous[i] = 1 / 7;
+    }
+
 }
