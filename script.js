@@ -35,7 +35,6 @@ window.onload = function () {
     actual = initialize_actual(locations);
 
     console.log(actual);
-    console.log(update_sensor_model("1010", 0.15, observed, actual));
     console.log(update_sensor_model("1000", 0.15, observed, actual));
 
     console.log(transition);
@@ -96,13 +95,12 @@ function initialize_actual(given_locations) {
 function update_sensor_model(obs, error, observation, actual) {
 
     console.log(observation);
-    var index = parseInt(obs, 2);
     var xor = 0;
     var correct = 0;
 
     for (var i = 0; i < 7; i++) {
-        xor = (index ^ actual[i]).toString(2);
+        xor = (obs ^ actual[i]).toString(2);
         correct = 4 - (xor.match(/1/g) || []).length;
-        observation[index][i][i] = ((1 - error) ** correct) * (error ** (4 - correct));
+        observation[obs][i][i] = ((1 - error) ** correct) * (error ** (4 - correct));
     }
 }
