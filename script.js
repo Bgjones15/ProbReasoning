@@ -31,11 +31,9 @@ window.onload = function () {
             }
         }
     }
+    console.log("Here "+math.multiply(math.matrix(locations),locations));
     var actual = new Array(7);
     actual = initialize_actual(locations);
-
-    console.log(actual);
-    console.log(update_sensor_model("1000", 0.15, observed, actual));
 
     console.log(transition);
     console.log(observed);
@@ -58,7 +56,9 @@ window.onload = function () {
                 bitInput += 1;
             }
             console.log(bitInput);
+            update_sensor_model(bitInput, ERROR, observed, actual);
             bitInput = 0;
+            
         });
     }
 
