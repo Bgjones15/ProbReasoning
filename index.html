@@ -1,44 +1,45 @@
 <html>
+
 <head>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.8.0/math.min.js"></script>
     <link rel=stylesheet href="style.css">
-    
-    
+
+
 </head>
-    
+
 <body>
-    
+
     <table>
-        
-    <tr>
-        <td class="certain">○</td> 
-        <td class="maybe">○</td>
-        <td class="wall"></td>
-    </tr>
-    <tr>
-        <td class="probably">○</td> 
-        <td class="wall"></td>
-        <td class="not">○</td> 
-    </tr>
-    <tr>
-        <td class="maybe">○</td> 
-        <td class="certain">○</td>
-        <td class=probably>○</td>
-    </tr>    
-    
+
+        <tr>
+            <td>○</td>
+            <td>○</td>
+            <td class="wall"></td>
+        </tr>
+        <tr>
+            <td>○</td>
+            <td class="wall"></td>
+            <td>○</td>
+        </tr>
+        <tr>
+            <td>○</td>
+            <td>○</td>
+            <td>○</td>
+        </tr>
+
     </table>
-    
+
     <div id="input">
-    <form onsubmit="event.preventDefault()">
-    <div>Enter in the observed results. eg: NSE NSW ES ...</div>
-    <input type="text" id="inputText">
-    <label style="display:block">Error Rate: <input type="number" value=0 min=0 step=.01 max=1 id="error"></label>
-    <div id="output">Hovered Probability: 0</div>
-    <input type="submit" id="submit" style="display:block">
-    </form>
+        <form onsubmit="event.preventDefault()">
+            <div>Enter in the observed results. eg: NSE NSW ES ...</div>
+            <input type="text" id="inputText">
+            <label style="display:block">Error Rate: <input type="number" value=0 min=0 step=.01 max=1 id="error"></label>
+            <div id="output">Hovered Probability: 0</div>
+            <input type="submit" id="submit" style="display:block">
+        </form>
     </div>
-    
+
 </body>
 
 
