@@ -41,8 +41,8 @@ window.onload = function () {
     for (var i = 0; i < 7; i++) {
         previous[i] = 1 / 7;
     }
-    
-    document.getElementById("error").oninput = function(){
+
+    document.getElementById("error").oninput = function () {
         submit.click();
     }
 
@@ -79,23 +79,20 @@ function setMap(previous) {
     for (var i = 0; i < 7; i++) {
         var blocks = document.getElementsByTagName("td");
         Array.from(blocks).forEach(function (elem) {
-            if (elem.className != "wall" && elem.id==i) {
+            if (elem.className != "wall" && elem.id == i) {
                 elem.style.backgroundColor = "hsl(0,100%,100%)";
-                elem.style.backgroundColor = "hsl("+((previous[i]/.02)+160)+",100%,50%)";
+                elem.style.backgroundColor = "hsl(" + ((previous[i] / .02) + 160) + ",100%,50%)";
                 var x = previous[i];
-                elem.onmouseover = function(){
-                    document.getElementById("output").innerHTML = "Hovered Probability: "+x;
+                elem.onmouseover = function () {
+                    document.getElementById("output").innerHTML = "Hovered Probability: " + x;
                 }
-                if(previous[i]>.75){
+                if (previous[i] > .75) {
                     elem.className = "certain";
-                }
-                else if(previous[i]>.5){
+                } else if (previous[i] > .5) {
                     elem.className = "probably";
-                }
-                else if(previous[i]>.25){
+                } else if (previous[i] > .25) {
                     elem.className = "maybe";
-                }
-                else{
+                } else {
                     elem.className = "not";
                 }
             }
