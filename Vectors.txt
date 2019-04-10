@@ -1,0 +1,702 @@
+{
+  "AskReddit": {
+    "NSFW": .8,
+    "Objectivity": .8,
+    "Sentiment": -.2,
+    "Advocacy": -.7,
+    "Meme Intensity": -.8
+  },
+  "The_Donald": {
+    "NSFW": -.4,
+    "Objectivity": .9,
+    "Sentiment": -.8,
+    "Advocacy": .9,
+    "Meme Intensity": -.6
+  },
+  "funny": {
+    "NSFW": .7,
+    "Objectivity": .6,
+    "Sentiment": .6,
+    "Advocacy": -.2,
+    "Meme Intensity": .5
+  },
+  "gaming": {
+    "NSFW": .9,
+    "Objectivity": .7,
+    "Sentiment": .5,
+    "Advocacy": -.3,
+    "Meme Intensity": .2
+  },
+  "rupaulsdragrace": {
+    "NSFW": .5,
+    "Objectivity": -.2,
+    "Sentiment": .4,
+    "Advocacy": -.5,
+    "Meme Intensity": -.7
+  },
+  "aww": {
+    "NSFW": 1,
+    "Objectivity": .8,
+    "Sentiment": .9,
+    "Advocacy": -.8,
+    "Meme Intensity": .2
+  },
+  "StarWars": {
+    "NSFW": .7,
+    "Objectivity": .5,
+    "Sentiment": .3,
+    "Advocacy": -.5,
+    "Meme Intensity": -.3
+  },
+  "DDLC": {
+    "NSFW": .6,
+    "Objectivity": .7,
+    "Sentiment": .5,
+    "Advocacy": .5,
+    "Meme Intensity": .6
+  },
+  "movies": {
+    "NSFW": .6,
+    "Objectivity": .5,
+    "Sentiment": .6,
+    "Advocacy": .4,
+    "Meme Intensity": -.2
+  },
+  "pics": {
+    "NSFW": .6,
+    "Objectivity": -.4,
+    "Sentiment": .4,
+    "Advocacy": -.3,
+    "Meme Intensity": .7
+  },
+  "videos": {
+    "NSFW": .8,
+    "Objectivity": .9,
+    "Sentiment": 0,
+    "Advocacy": -.6,
+    "Meme Intensity": -.6
+  },
+  "dankmemes": {
+    "NSFW": -.5,
+    "Objectivity": .4,
+    "Sentiment": -.4,
+    "Advocacy": .2,
+    "Meme Intensity": 1
+  },
+  "BlackPeopleTwitter": {
+    "NSFW": .5,
+    "Objectivity": -.2,
+    "Sentiment": .3,
+    "Advocacy": 0,
+    "Meme Intensity": .7
+  },
+  "trashy": {
+    "NSFW": -.6,
+    "Objectivity": .8,
+    "Sentiment": -1,
+    "Advocacy": -.2,
+    "Meme Intensity": .7
+  },
+  "Rainbow6": {
+    "NSFW": .9,
+    "Objectivity": .7,
+    "Sentiment": .3,
+    "Advocacy": -.6,
+    "Meme Intensity": .8
+  },
+  "hiphopheads": {
+    "NSFW": .7,
+    "Objectivity": .9,
+    "Sentiment": .2,
+    "Advocacy": .3,
+    "Meme Intensity": -1
+  },
+  "me_irl": {
+    "NSFW": .8,
+    "Objectivity": .7,
+    "Sentiment": .6,
+    "Advocacy": .2,
+    "Meme Intensity": .7
+  },
+  "news": {
+    "NSFW": .5,
+    "Objectivity": .3,
+    "Sentiment": -.8,
+    "Advocacy": 1,
+    "Meme Intensity": -.8
+  },
+  "CringeAnarchy": {
+    "NSFW": .7,
+    "Objectivity": -.3,
+    "Sentiment": -.5,
+    "Advocacy": 0,
+    "Meme Intensity": .9
+  },
+  "gifs": {
+    "NSFW": .8,
+    "Objectivity": .1,
+    "Sentiment": .6,
+    "Advocacy": -.6,
+    "Meme Intensity": -.3
+  },
+  "todayilearned": {
+    "NSFW": .9,
+    "Objectivity": .6,
+    "Sentiment": .2,
+    "Advocacy": -.7,
+    "Meme Intensity": -.8
+  },
+  "worldnews": {
+    "NSFW": -.6,
+    "Objectivity": -.5,
+    "Sentiment": -.3,
+    "Advocacy": .8,
+    "Meme Intensity": .4
+  },
+  "PrequelMemes": {
+    "NSFW": .9,
+    "Objectivity": .3,
+    "Sentiment": .6,
+    "Advocacy": -.5,
+    "Meme Intensity": 1
+  },
+  "ChapoTrapHouse": {
+    "NSFW": -.5,
+    "Objectivity": .6,
+    "Sentiment": -.5,
+    "Advocacy": .7,
+    "Meme Intensity": .8
+  },
+  "marvelstudios": {
+    "NSFW": 1,
+    "Objectivity": .6,
+    "Sentiment": .6,
+    "Advocacy": -.2,
+    "Meme Intensity": -.7
+  },
+  "ComedyCemetery": {
+    "NSFW": -.8,
+    "Objectivity": .8,
+    "Sentiment": -.7,
+    "Advocacy": -.5,
+    "Meme Intensity": 1
+  },
+  "2007scape": {
+    "NSFW": .2,
+    "Objectivity": .6,
+    "Sentiment": -.6,
+    "Advocacy": -.5,
+    "Meme Intensity": .3
+  },
+  "hearthstone": {
+    "NSFW": .8,
+    "Objectivity": .5,
+    "Sentiment": .1,
+    "Advocacy": .2,
+    "Meme Intensity": .7
+  },
+  "DBZDokkanBattle": {
+    "NSFW": .9,
+    "Objectivity": .6,
+    "Sentiment": .7,
+    "Advocacy": -.8,
+    "Meme Intensity": -.8
+  },
+  "LiverpoolFC": {
+    "NSFW": 1,
+    "Objectivity": -.6,
+    "Sentiment": .3,
+    "Advocacy": .4,
+    "Meme Intensity": -1
+  },
+  "Cricket": {
+    "NSFW": 1,
+    "Objectivity": .4,
+    "Sentiment": -.2,
+    "Advocacy": -.7,
+    "Meme Intensity": .1
+  },
+  "LivestreamFail": {
+    "NSFW": -.8,
+    "Objectivity": .6,
+    "Sentiment": -.8,
+    "Advocacy": .1,
+    "Meme Intensity": 1
+  },
+  "TeenMomOGandTeenMom2": {
+    "NSFW": .9,
+    "Objectivity": .5,
+    "Sentiment": .3,
+    "Advocacy": .1,
+    "Meme Intensity": -.9
+  },
+  "Bitcoin": {
+    "NSFW": .6,
+    "Objectivity": .6,
+    "Sentiment": -.1,
+    "Advocacy": .4,
+    "Meme Intensity": .3
+  },
+  "wow": {
+    "NSFW": .9,
+    "Objectivity": .6,
+    "Sentiment": .1,
+    "Advocacy": .2,
+    "Meme Intensity": .2
+  },
+  "DotA2": {
+    "NSFW": .8,
+    "Objectivity": .5,
+    "Sentiment": .2,
+    "Advocacy": 0,
+    "Meme Intensity": .7
+  },
+  "NintendoSwitch": {
+    "NSFW": 1,
+    "Objectivity": .6,
+    "Sentiment": .4,
+    "Advocacy": -.6,
+    "Meme Intensity": -.7
+  },
+  "anime": {
+    "NSFW": .6,
+    "Objectivity": .7,
+    "Sentiment": .4,
+    "Advocacy": -.7,
+    "Meme Intensity": .3
+  },
+  "DestinyTheGame": {
+    "NSFW": 1,
+    "Objectivity": -.7,
+    "Sentiment": .3,
+    "Advocacy": -.6,
+    "Meme Intensity": -.3
+  },
+  "grandorder": {
+    "NSFW": -.8,
+    "Objectivity": .9,
+    "Sentiment": .6,
+    "Advocacy": -.6,
+    "Meme Intensity": .8
+  },
+  "CryptoCurrency": {
+    "NSFW": 1,
+    "Objectivity": -.6,
+    "Sentiment": -.1,
+    "Advocacy": .5,
+    "Meme Intensity": -.9
+  },
+  "survivor": {
+    "NSFW": 1,
+    "Objectivity": .6,
+    "Sentiment": .8,
+    "Advocacy": -.6,
+    "Meme Intensity": -1
+  },
+  "Ice_Poseidon": {
+    "NSFW": -.9,
+    "Objectivity": .9,
+    "Sentiment": -.7,
+    "Advocacy": 0,
+    "Meme Intensity": 1
+  },
+  "RoastMe": {
+    "NSFW": .7,
+    "Objectivity": 1,
+    "Sentiment": -.9,
+    "Advocacy": -1,
+    "Meme Intensity": .2
+  },
+  "Animemes": {
+    "NSFW": -.6,
+    "Objectivity": .8,
+    "Sentiment": .6,
+    "Advocacy": -.8,
+    "Meme Intensity": .8
+  },
+  "antiMLM": {
+    "NSFW": .4,
+    "Objectivity": -.6,
+    "Sentiment": -.6,
+    "Advocacy": 1,
+    "Meme Intensity": .2
+  },
+  "Showerthoughts": {
+    "NSFW": .7,
+    "Objectivity": -.5,
+    "Sentiment": .5,
+    "Advocacy": -.9,
+    "Meme Intensity": .5
+  },
+  "mildlyinteresting": {
+    "NSFW": .9,
+    "Objectivity": -.8,
+    "Sentiment": .8,
+    "Advocacy": -.8,
+    "Meme Intensity": -.7
+  },
+  "milliondollarextreme": {
+    "NSFW": -.5,
+    "Objectivity": 0,
+    "Sentiment": -.3,
+    "Advocacy": .3,
+    "Meme Intensity": .6
+  },
+  "europe": {
+    "NSFW": 1,
+    "Objectivity": .9,
+    "Sentiment": -.7,
+    "Advocacy": .7,
+    "Meme Intensity": -.5
+  },
+  "opieandanthony": {
+    "NSFW": .8,
+    "Objectivity": .5,
+    "Sentiment": .7,
+    "Advocacy": -.6,
+    "Meme Intensity": -.8
+  },
+  "Tinder": {
+    "NSFW": .3,
+    "Objectivity": .8,
+    "Sentiment": .1,
+    "Advocacy": -.8,
+    "Meme Intensity": -1
+  },
+  "Eminem": {
+    "NSFW": 1,
+    "Objectivity": .8,
+    "Sentiment": .7,
+    "Advocacy": -.6,
+    "Meme Intensity": -.9
+  },
+  "StarWarsBattlefront": {
+    "NSFW": 1,
+    "Objectivity": -.5,
+    "Sentiment": -.1,
+    "Advocacy": -.8,
+    "Meme Intensity": .3
+  },
+  "traaaaaaannnnnnnnnns": {
+    "NSFW": .8,
+    "Objectivity": .8,
+    "Sentiment": .7,
+    "Advocacy": .6,
+    "Meme Intensity": -.6
+  },
+  "insanepeoplefacebook": {
+    "NSFW": .5,
+    "Objectivity": .8,
+    "Sentiment": -.7,
+    "Advocacy": -.5,
+    "Meme Intensity": .6
+  },
+  "pcmasterrace": {
+    "NSFW": .9,
+    "Objectivity": .8,
+    "Sentiment": 0,
+    "Advocacy": .2,
+    "Meme Intensity": .7
+  },
+  "formula1": {
+    "NSFW": 1,
+    "Objectivity": .6,
+    "Sentiment": .7,
+    "Advocacy": -.9,
+    "Meme Intensity": -.8
+  },
+  "TwoBestFriendsPlay": {
+    "NSFW": .9,
+    "Objectivity": .7,
+    "Sentiment": .6,
+    "Advocacy": -.8,
+    "Meme Intensity": .5
+  },
+  "trees": {
+    "NSFW": .9,
+    "Objectivity": .2,
+    "Sentiment": .7,
+    "Advocacy": .3,
+    "Meme Intensity": -.5
+  },
+  "freefolk": {
+    "NSFW": 1,
+    "Objectivity": .5,
+    "Sentiment": .8,
+    "Advocacy": -.7,
+    "Meme Intensity": -1
+  },
+  "Sneakers": {
+    "NSFW": 1,
+    "Objectivity": -.8,
+    "Sentiment": .9,
+    "Advocacy": 0,
+    "Meme Intensity": -.7
+  },
+  "MGTOW": {
+    "NSFW": -.2,
+    "Objectivity": .7,
+    "Sentiment": -.5,
+    "Advocacy": .9,
+    "Meme Intensity": .6
+  },
+  "WTF": {
+    "NSFW": .7,
+    "Objectivity": .6,
+    "Sentiment": -.4,
+    "Advocacy": -.7,
+    "Meme Intensity": -.5
+  },
+  "Jokes": {
+    "NSFW": .5,
+    "Objectivity": .8,
+    "Sentiment": -.6,
+    "Advocacy": -.7,
+    "Meme Intensity": 1
+  },
+  "BravoRealHousewives": {
+    "NSFW": .4,
+    "Objectivity": .8,
+    "Sentiment": 0,
+    "Advocacy": -.6,
+    "Meme Intensity": -.8
+  },
+  "reddevils": {
+    "NSFW": 1,
+    "Objectivity": -.8,
+    "Sentiment": .6,
+    "Advocacy": .5,
+    "Meme Intensity": -.8
+  },
+  "television": {
+    "NSFW": 1,
+    "Objectivity": .7,
+    "Sentiment": .5,
+    "Advocacy": -.9,
+    "Meme Intensity": -.7
+  },
+  "furry_irl": {
+    "NSFW": -.6,
+    "Objectivity": .8,
+    "Sentiment": .3,
+    "Advocacy": .7,
+    "Meme Intensity": .4
+  },
+  "tf2": {
+    "NSFW": .8,
+    "Objectivity": .7,
+    "Sentiment": .8,
+    "Advocacy": -.6,
+    "Meme Intensity": .5
+  },
+  "teenagers": {
+    "NSFW": .2,
+    "Objectivity": .7,
+    "Sentiment": .1,
+    "Advocacy": .3,
+    "Meme Intensity": 1
+  },
+  "Warframe": {
+    "NSFW": .9,
+    "Objectivity": .8,
+    "Sentiment": .6,
+    "Advocacy": -.7,
+    "Meme Intensity": -.5
+  },
+  "OldSchoolCool": {
+    "NSFW": 1,
+    "Objectivity": -.8,
+    "Sentiment": .8,
+    "Advocacy": -1,
+    "Meme Intensity": -.9
+  },
+  "pathofexile": {
+    "NSFW": .8,
+    "Objectivity": -.2,
+    "Sentiment": 0,
+    "Advocacy": -.8,
+    "Meme Intensity": -.5
+  },
+  "popheads": {
+    "NSFW": .8,
+    "Objectivity": .7,
+    "Sentiment": 0,
+    "Advocacy": .2,
+    "Meme Intensity": -.6
+  },
+  "interestingasfuck": {
+    "NSFW": .5,
+    "Objectivity": 1,
+    "Sentiment": 0,
+    "Advocacy": -.5,
+    "Meme Intensity": -.6
+  },
+  "WWII": {
+    "NSFW": .5,
+    "Objectivity": .6,
+    "Sentiment": -.4,
+    "Advocacy": -.8,
+    "Meme Intensity": -.7
+  },
+  "StarWarsLeaks": {
+    "NSFW": .9,
+    "Objectivity": 0,
+    "Sentiment": .6,
+    "Advocacy": -.7,
+    "Meme Intensity": .1
+  },
+  "ethtrader": {
+    "NSFW": .6,
+    "Objectivity": .6,
+    "Sentiment": -.1,
+    "Advocacy": .4,
+    "Meme Intensity": .3
+  },
+  "youtubehaiku": {
+    "NSFW": .7,
+    "Objectivity": .8,
+    "Sentiment": .5,
+    "Advocacy": -.5,
+    "Meme Intensity": .7
+  },
+  "4chan": {
+    "NSFW": -1,
+    "Objectivity": .8,
+    "Sentiment": -.7,
+    "Advocacy": 0,
+    "Meme Intensity": 1
+  },
+  "india": {
+    "NSFW": .8,
+    "Objectivity": .7,
+    "Sentiment": -.2,
+    "Advocacy": 0,
+    "Meme Intensity": 0
+  },
+  "CrappyDesign": {
+    "NSFW": .8,
+    "Objectivity": .9,
+    "Sentiment": .1,
+    "Advocacy": .2,
+    "Meme Intensity": .4
+  },
+  "90DayFiance": {
+    "NSFW": 1,
+    "Objectivity": .8,
+    "Sentiment": .4,
+    "Advocacy": -.6,
+    "Meme Intensity": .3
+  },
+  "greentext": {
+    "NSFW": -1,
+    "Objectivity": .9,
+    "Sentiment": -.8,
+    "Advocacy": 0,
+    "Meme Intensity": 1
+  },
+  "manga": {
+    "NSFW": .8,
+    "Objectivity": .8,
+    "Sentiment": .6,
+    "Advocacy": .1,
+    "Meme Intensity": -.5
+  },
+  "gtaonline": {
+    "NSFW": .7,
+    "Objectivity": .9,
+    "Sentiment": 0,
+    "Advocacy": 0,
+    "Meme Intensity": .5
+  },
+  "conspiracy": {
+    "NSFW": .7,
+    "Objectivity": .9,
+    "Sentiment": -.6,
+    "Advocacy": 1,
+    "Meme Intensity": .4
+  },
+  "australia": {
+    "NSFW": .5,
+    "Objectivity": .6,
+    "Sentiment": -.2,
+    "Advocacy": .3,
+    "Meme Intensity": -.1
+  },
+  "wallstreetbets": {
+    "NSFW": 1,
+    "Objectivity": .2,
+    "Sentiment": 0,
+    "Advocacy": 0,
+    "Meme Intensity": -1
+  },
+  "kpop": {
+    "NSFW": .9,
+    "Objectivity": .7,
+    "Sentiment": .8,
+    "Advocacy": .2,
+    "Meme Intensity": -.5
+  },
+  "streetwear": {
+    "NSFW": 1,
+    "Objectivity": .8,
+    "Sentiment": .5,
+    "Advocacy": -.5,
+    "Meme Intensity": -.7
+  },
+  "thatHappened": {
+    "NSFW": 1,
+    "Objectivity": .5,
+    "Sentiment": 0,
+    "Advocacy": -.7,
+    "Meme Intensity": -.2
+  },
+  "btc": {
+    "NSFW": .6,
+    "Objectivity": .6,
+    "Sentiment": -.1,
+    "Advocacy": .4,
+    "Meme Intensity": .3
+  },
+  "Youniqueamua": {
+    "NSFW": .9,
+    "Objectivity": .8,
+    "Sentiment": .8,
+    "Advocacy": -.6,
+    "Meme Intensity": -.5
+  },
+  "brockhampton": {
+    "NSFW": .8,
+    "Objectivity": .9,
+    "Sentiment": .7,
+    "Advocacy": 0,
+    "Meme Intensity": .3
+  },
+  "surrealmemes": {
+    "NSFW": .5,
+    "Objectivity": 1,
+    "Sentiment": .4,
+    "Advocacy": 0,
+    "Meme Intensity": 1
+  },
+  "nsfw": {
+    "NSFW": -1,
+    "Objectivity": .9,
+    "Sentiment": 0,
+    "Advocacy": -.7,
+    "Meme Intensity": 0
+  },
+  "MassiveCock": {
+    "NSFW": -1,
+    "Objectivity": 1,
+    "Sentiment": .7,
+    "Advocacy": .5,
+    "Meme Intensity": -.3
+  },
+  "cursedimages": {
+    "NSFW": .8,
+    "Objectivity": .6,
+    "Sentiment": .4,
+    "Advocacy": -.6,
+    "Meme Intensity": -.8
+  }
+}
